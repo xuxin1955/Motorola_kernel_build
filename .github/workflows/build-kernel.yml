@@ -33,7 +33,9 @@ jobs:
           
       - name: KernelSU
         run: |
+          cd kernel-source
           curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+          cd ..
 
       - name: Build kernel
         run: |
